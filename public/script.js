@@ -59,6 +59,31 @@ function element(tag, className, text) {
   return node;
 }
 
+function productLinkForDevice(value) {
+  let url;
+  try { url = new URL(value); } catch { return null; }
+  if (!['https:', 'http:'].includes(url.protocol)) return null;
+
+  const browserNavigator = typeof navigator === 'object' ? navigator : (typeof window === 'object' ? window.navigator : null);
+  const userAgent = browserNavigator?.userAgent || '';
+  const mobile = /Android|iPhone|iPod|Windows Phone|Mobile|HarmonyOS/i.test(userAgent || '');
+  if (!mobile) return url.href;
+
+  if (url.hostname === 'search.jd.com' && url.pathname.toLowerCase() === '/search') {
+    const keyword = url.searchParams.get('keyword');
+    if (keyword) {
+      const mobileSearch = new URL('https://so.m.jd.com/ware/search.action');
+      mobileSearch.searchParams.set('keyword', keyword);
+      return mobileSearch.href;
+    }
+  }
+
+  const jdProduct = url.hostname === 'item.jd.com' && url.pathname.match(/^\/(\d+)\.html$/);
+  if (jdProduct) return `https://item.m.jd.com/product/${jdProduct[1]}.html`;
+
+  return url.href;
+}
+
 function showProductSkeletons(host) {
   host.classList?.remove('results-reveal');
   host.classList?.add('skeleton-wave');
@@ -226,9 +251,7 @@ function render(data) {
     }
     const link = element('a', 'mt-auto block rounded-xl bg-slate-50 px-4 py-3 text-center text-sm font-medium text-teal-800 hover:bg-teal-50 focus-visible:ring-2 focus-visible:ring-teal-600', '了解商品 ↗');
     // 只允许网页链接；模拟链接不会导致页面跳到顶部。
-    let url;
-    try { url = new URL(product.link); } catch { url = null; }
-    link.href = url && ['https:', 'http:'].includes(url.protocol) ? url.href : '#';
+    link.href = productLinkForDevice(product.link) || '#';
     if (link.getAttribute('href') === '#') {
       link.textContent = '了解商品 ↗（模拟链接）';
       link.addEventListener('click', event => event.preventDefault());
