@@ -1,0 +1,1 @@
+{"sessionId":"ebfe86ad-5b40-453a-82c0-6023cf53f172","originalQuery":"充电器","query":"手机充电器","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种充电接口的手机充电器？","type":"single","options":["Type-C手机充电器","Lightning苹果手机充电器","Micro-USB手机充电器"]}],"narrowing":[{"id":"q0","title":"需要补充的信息","answer":"手机充电器"}],"time":"2026-10-01T13:15:06.683Z"}

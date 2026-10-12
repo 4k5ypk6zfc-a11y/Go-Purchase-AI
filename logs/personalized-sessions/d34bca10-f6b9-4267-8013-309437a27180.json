@@ -1,0 +1,1 @@
+{"sessionId":"d34bca10-f6b9-4267-8013-309437a27180","originalQuery":"箱子","query":"行李箱","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种箱体类型的行李箱？","type":"single","options":["登机箱","托运箱","可扩容行李箱"]}],"narrowing":[{"id":"q0","title":"你要购买哪种箱子？","answer":"行李箱"}],"time":"2026-10-02T03:55:21.836Z"}

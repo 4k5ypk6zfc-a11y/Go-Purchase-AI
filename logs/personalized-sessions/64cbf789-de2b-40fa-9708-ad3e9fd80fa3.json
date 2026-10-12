@@ -1,0 +1,1 @@
+{"sessionId":"64cbf789-de2b-40fa-9708-ad3e9fd80fa3","originalQuery":"充电器","query":"手机充电器","questions":[{"id":"q1","title":"需要确认的充电器类型","type":"single","options":["苹果手机充电器","安卓手机充电器","无线手机充电器","车载手机充电器"]}],"narrowing":[{"id":"q0","title":"你想给哪类设备选购充电器？","answer":"手机充电器"}],"time":"2026-09-30T10:50:21.702Z"}

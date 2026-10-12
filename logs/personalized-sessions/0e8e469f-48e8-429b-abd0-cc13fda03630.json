@@ -1,0 +1,1 @@
+{"sessionId":"0e8e469f-48e8-429b-abd0-cc13fda03630","originalQuery":"衣服","query":"女装","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种类型的女装？","type":"single","options":["连衣裙","T恤","牛仔裤","衬衫","外套"]}],"narrowing":[{"id":"q0","title":"需要补充的信息","answer":"女装"}],"time":"2026-10-02T17:43:24.295Z"}

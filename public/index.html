@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选购助手 · 帮你选得明白</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/styles.css?v=20261010-header-actions-v4">
+  <script>window.DISABLE_GUIDE_GENERATION = false;</script>
+  <script src="/script.js?v=20261010-header-actions-v2" defer></script>
+</head>
+<body class="home-page min-h-screen bg-[#f6f7f3] text-slate-800 antialiased">
+  <main class="mx-auto max-w-7xl px-4 py-6 sm:px-8 sm:py-10">
+    <section id="browser-shell" class="browser-shell" aria-label="你的专属选购助手首屏">
+      <div class="browser-canvas">
+        <header class="brand-nav">
+          <a href="/" class="brand-lockup" aria-label="你的专属选购助手首页">
+            <span class="brand-mark" aria-hidden="true">
+              <span class="brand-dog"><img src="/assets/go-select-logo.jpg" alt=""></span>
+              <span class="brand-wordmark"><img src="/assets/go-select-logo.jpg" alt=""></span>
+            </span>
+            <span class="brand-copy">
+              <span class="brand-name">你的专属选购助手</span>
+              <span class="brand-tagline">少点纠结，多点合适</span>
+            </span>
+          </a>
+          <nav class="brand-actions" aria-label="首页功能入口">
+            <a class="brand-action brand-action-active" href="/" aria-current="page">选购攻略</a>
+            <a class="brand-action brand-action-link" href="/personalized.html">为你推荐</a>
+            <button id="mobile-entry" class="brand-action brand-action-link" type="button">手机版</button>
+            <button id="login-entry" class="brand-action brand-action-primary" type="button">登录</button>
+          </nav>
+        </header>
+
+        <div id="login-notice" class="feature-notice" role="dialog" aria-modal="false" aria-labelledby="login-notice-title" hidden>
+          <p id="login-notice-title">功能尚待开发</p>
+        </div>
+
+        <div class="hero-grid">
+          <section class="hero-copy">
+            <p class="hero-eyebrow"><span aria-hidden="true">✦</span> AI 购物决策助手</p>
+            <h1>想买什么？<br><span>我们帮你选得更明白。</span></h1>
+            <p class="hero-description">从选购攻略到商品对比，把复杂信息变成简单、可执行的购买建议。</p>
+            <form id="search-form" class="hero-search">
+              <label for="query" class="sr-only">商品关键词</label>
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+              </span>
+              <input id="query" name="query" type="text" maxlength="100" required autocomplete="off" placeholder="试试搜索：笔记本电脑" class="min-w-0 flex-1 bg-transparent outline-none">
+              <div class="search-actions">
+                <button id="search-button" type="submit">帮我选选 <span>攻略＋热门推荐</span></button>
+              </div>
+            </form>
+            <div class="hero-actions">
+              <button id="personalized-results-entry" type="submit" form="search-form" formaction="/personalized.html" formmethod="get" class="personalized-text-entry">回答3-5个问题，获取更精准推荐 &gt;&gt;&gt;</button>
+            </div>
+            <p class="hero-note"><span aria-hidden="true">✓</span> AI 生成的选购参考，购买前请核实商品信息与价格。</p>
+          </section>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="product-float product-float-one"><span class="float-icon">♫</span><span><b>降噪耳机</b><small>通勤热门</small></span></div>
+            <div class="product-float product-float-two"><span class="float-icon">◎</span><span><b>轻薄本</b><small>办公首选</small></span></div>
+            <div class="product-float product-float-three"><span class="float-icon">✦</span><span><b>护肤精选</b><small>温和保湿</small></span></div>
+            <div class="phone-shadow"></div>
+            <div class="phone-device">
+              <div class="phone-edge"></div>
+              <div class="phone-screen">
+                <div class="phone-status"><span>9:41</span><span>● ◔</span></div>
+                <div class="phone-appbar"><span class="mini-brand">选</span><span>为你精选</span><span class="phone-more">•••</span></div>
+                <div class="phone-greeting"><small>今天想买什么？</small><b>更适合你的商品</b></div>
+                <div class="phone-search"><span>⌕</span><span>搜索商品或需求</span></div>
+                <div class="phone-section-title"><b>热门推荐</b><small>查看全部</small></div>
+                <div class="phone-product featured-product">
+                  <div class="phone-product-art art-headphone"><span></span></div>
+                  <div><b>无线降噪耳机</b><small>舒适佩戴 · 续航持久</small><strong>约¥ 699–899</strong></div>
+                </div>
+                <div class="phone-mini-grid">
+                  <div class="phone-mini-card"><span class="mini-art art-shoe"></span><b>轻便跑鞋</b><small>约¥299起</small></div>
+                  <div class="phone-mini-card"><span class="mini-art art-maker"></span><b>便携咖啡机</b><small>约¥399起</small></div>
+                </div>
+                <div class="phone-homebar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <p id="error" role="alert" hidden class="mx-auto mt-5 max-w-2xl rounded-2xl border border-rose-100 bg-rose-50 px-5 py-4 text-sm text-rose-700"></p>
+      <section id="results" hidden aria-labelledby="results-title" class="mt-10 rounded-[2rem] border border-slate-200/70 bg-white/70 p-5 sm:p-8">
+      <div class="flex items-center gap-4 border-b border-slate-200/70 pb-5">
+        <div><p class="mb-1 text-xs text-teal-700">为你整理</p><h2 id="results-title" class="break-all text-xl font-semibold">选购结果</h2></div>
+      </div>
+      <div id="loading" hidden role="status" class="py-16 text-center">
+        <span aria-hidden="true" class="mx-auto mb-4 block h-7 w-7 animate-spin rounded-full border-2 border-teal-100 border-t-teal-700 motion-reduce:animate-none"></span>
+        <p class="text-sm text-slate-600">正在整理选购攻略和推荐商品…</p>
+        <p class="mt-2 text-xs text-slate-400">给我们一点时间，帮你理清选择。</p>
+      </div>
+      <div id="result-content" hidden>
+        <section class="mt-7" aria-labelledby="guide-title">
+          <h3 id="guide-title" class="mb-4 text-lg font-semibold"><span class="mr-2 text-sm text-teal-600">01</span> 选购攻略</h3>
+          <div class="guide-card">
+            <div id="buying-guide" class="space-y-3 p-5 text-slate-600 sm:p-6"></div>
+            <div id="guide-feedback" hidden></div>
+          </div>
+        </section>
+        <section class="mt-9" aria-labelledby="products-title">
+          <button id="personalized-products-entry" hidden type="button" class="personalized-products-entry">想找到更多心仪商品？点击这里进入<strong>个性化推荐</strong>！</button>
+          <h3 id="products-title" class="mb-4 text-lg font-semibold"><span class="mr-2 text-sm text-teal-600">02</span> 热门商品</h3>
+          <div id="products" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+          <p class="mt-5 text-xs text-slate-400">推荐商品由AI生成，购买时请核对商品信息</p>
+          <div id="products-feedback" hidden></div>
+        </section>
+      </div>
+      </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

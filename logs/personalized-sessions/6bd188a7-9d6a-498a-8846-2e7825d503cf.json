@@ -1,0 +1,1 @@
+{"sessionId":"6bd188a7-9d6a-498a-8846-2e7825d503cf","originalQuery":"箱子","query":"行李箱","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种箱体结构的行李箱？","type":"single","options":["拉链行李箱","铝框行李箱","前开盖行李箱"]}],"narrowing":[{"id":"q0","title":"你需要哪类箱子？","answer":"行李箱"}],"time":"2026-10-02T05:25:26.901Z"}

@@ -1,0 +1,1 @@
+{"sessionId":"63e5ca1c-78ad-468b-9c75-559e07b7a0b7","originalQuery":"电脑","query":"台式电脑","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种类型的台式电脑？","type":"single","options":["游戏台式机","办公台式机","一体机","迷你主机"]}],"narrowing":[{"id":"q0","title":"需要补充的信息","answer":"台式电脑"}],"time":"2026-10-03T11:55:19.228Z"}

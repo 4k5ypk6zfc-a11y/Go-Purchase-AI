@@ -1,0 +1,1 @@
+{"sessionId":"5c2e59ef-a0e3-4725-9d4c-7e0abc239187","originalQuery":"衣服","query":"男士上衣","explicitFacts":[],"questions":[{"id":"q1","title":"你需要哪种款式的男士上衣？","type":"single","options":["男士T恤","男士衬衫","男士卫衣","男士Polo衫","男士针织衫"]}],"narrowing":[{"id":"q0","title":"你主要想买哪类衣服？","answer":"男士上衣"}],"time":"2026-10-02T06:04:46.519Z"}

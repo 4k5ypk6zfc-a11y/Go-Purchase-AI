@@ -1,0 +1,1 @@
+{"sessionId":"7fb26eda-6b90-4fcf-8f37-09df6ccec77b","originalQuery":"200元耳机","query":"耳机","explicitFacts":[{"type":"budget","value":"约200元","source":"200元"}],"questions":[{"id":"q1","title":"你需要哪种连接使用方式的耳机？","type":"single","options":["蓝牙耳机","有线耳机","运动耳机"]}],"narrowing":[],"time":"2026-09-30T14:12:19.438Z"}
